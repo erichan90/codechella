@@ -134,7 +134,8 @@ ta time_til if time_til>0, gen(lags)
 gen lead_til = 0
 replace lead_til = time_til if time_til<-1
 gen lag_til = 0
-replace lag_til = time_til if time_til>0
+replace lag_til = time_til if 
+>0
 
 gen abs_lead_til = abs(lead_til)
 
